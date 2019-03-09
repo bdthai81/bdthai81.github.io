@@ -1,0 +1,14 @@
+#profile .card-body {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+
+#profile p {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+}
+
+.flat_horizontal_margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

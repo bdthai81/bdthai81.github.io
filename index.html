@@ -1,65 +1,410 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>   
+    <!-- Bootstrap Theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.css">
+    <!-- D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <link rel="stylesheet" href="./static/css/hs_flip.css">
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
-
-<body>
-    <section>
-        <h1>Binh</h1>
-        <article>
-        <a target="_blank" href="http://lorempixel.com/400/200/">
-          <img src="http://lorempixel.com/400/200/" alt="Dummy Image">
-        </a>
-        <p><em>My first short paragraph</em></p>
-        <p><em>My second short paragraph</em></p>
-        </article>
-        <hr>
-        <article>
-        <ul>
-            <li>Email: bdthai81@gmail.com</li>
-            <li>linkedin: <a target="_blank" href="https://www.linkedin.com/in/bdthai81/">bdthai81</a></li>
-            <li>github:  <a target="_blank" href="https://github.com/bdthai81">bdthai81</a></li>
-        </ul>
-        <hr>
-        <article>
-            <table border="1">
-                <thead>
-                    <tr>
-                    <th colspan="4">Favorites</th>
-                    </tr>
-                    <tr>
-                    <th>Movies</th>
-                    <th>Songs</th>
-                    <th>Books</th>
-                    <th>Activities</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>Godzilla Netflix</td>
-                    <td>Song 1</td>
-                    <td>Game of Thrones</td>
-                    <td>Raspberry Pi</td>
-                    </tr>
-                    <tr>
-                    <td>Avengers</td>
-                    <td>Song 2</td>
-                    <td>The world is flat</td>
-                    <td>Activity 2</td>
-                    </tr>
-                    <tr>
-                    <td>Movie 3</td>
-                    <td>Song 3</td>
-                    <td>The Jungle</td>
-                    <td>Activity 3</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-      </section>
-    
+<body class="bg-light">
+    <div class="wrapper">
+      <!-- Header -->
+      <header>
+        <div class="Container">
+            <nav class="navbar navbar-light bg-light flat_horizontal_margin">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="display-4 text-center">Binh D. Thai</h2>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="lead text-center flat_horizontal_margin" >bdthai81@gmail.com |
+                            <a class="lead" href="https://github.com/bdthai81">Github</a> |
+                            <a class="lead" href="https://linkedin.com/in/bdthai81/">Linkedin</a> |
+                            <a class="lead" href="https://www.hackerrank.com/bdthai81">Hacker Rank</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+      </header>
+      <!-- Main Content -->
+      <main>
+        <div class="p-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Profile -->
+                    <div id="profile" class="card mb-3">
+                        <h2 class="card-header">Profile</h2>
+                        <div class="card-body">
+                            <h5 id="profileTitle" class="card-title"></h5>
+                        </div>
+                        <img style="height: 200px; width: 100%; display: block;" src="./static/images/profile.png">
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <label class="card-text">Activities</label>
+                                    <p id="profileActivitie1"></p>
+                                    <p id="profileActivitie2"></p>
+                                    <p id="profileActivitie3"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <label class="card-text">Books</label>
+                                    <p id="profileBook1"></p>
+                                    <p id="profileBook2"></p>
+                                    <p id="profileBook3"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <label class="card-text">Movies</label>
+                                    <p id="profileMovie1"></p>
+                                    <p id="profileMovie2"></p>
+                                    <p id="profileMovie3"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <label class="card-text">Reading</label>
+                                    <p id="profileReading1"></p>
+                                    <p id="profileReading2"></p>
+                                    <p id="profileReading3"></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="pf-wrapper ">
+                      <!-- Projects -->
+                      <div class="row card mb-3">
+                        <h2 class="card-header text-center flat_horizontal_margin">Projects</h2>
+                        <div class="full hide-scroll card-body">
+                        <ul class="hs">
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-1.png)">
+                                        <div class="inner">
+                                            <p>Rover</p>
+                                            <span>Raspberry Pi, Python, Flask, Bootstrap, and Javascript</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-2.png)">
+                                        <div class="inner">
+                                            <p>Analytic GUI</p>
+                                            <span>TKInter</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-2.png)">
+                                        <div class="inner">
+                                            <p>Hands-On ML</p>
+                                            <span>District Pricing, Classification</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-2.png)">
+                                        <div class="inner">
+                                            <p>Audio word scraper</p>
+                                            <span>Splinter</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-2.png)">
+                                        <div class="inner">
+                                            <p>Record/Convert Audio</p>
+                                            <span>ffmpeg and sounddevice</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-2.png)">
+                                        <div class="inner">
+                                            <p>Wake word detection</p>
+                                            <span>Numpy, pydub, iPython, and keras</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                        </ul>
+                        </div>
+                      </div>
+                      <!-- Data Analytics Assignments -->
+                      <div class="row card mb-3"> 
+                        <h2 class="card-header text-center flat_horizontal_margin">Data Analytics Assignments</h2>
+                        <div class="full hide-scroll card-body">
+                        <ul class="hs">
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-11.png)">
+                                        <div class="inner">
+                                            <p>UFO Finder</p>
+                                            <span>JavaScript, HTML, CSS, and D3.js</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-10.png)">
+                                        <div class="inner">
+                                            <p>Mission to Mars</p>
+                                            <span>Jupyter Notebook, Pandas, and Requests/Splinter</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-9.png)">
+                                        <div class="inner">
+                                            <p>Latitude Analysis Dashboard</p>
+                                            <span>HTML, CSS, and Bootstrap</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-8.png)">
+                                        <div class="inner">
+                                            <p>Surfs Up!</p>
+                                            <span>SQLAlchemy ORM queries, Pandas, and Matplotlib</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-7.png)">
+                                        <div class="inner">
+                                            <p>Sakila DB</p>
+                                            <span>MySQL</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-6.png)">
+                                        <div class="inner">
+                                            <p>What's the Weather Like?</p>
+                                            <span>Python requests, APIs, and JSON</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-5.png)">
+                                        <div class="inner">
+                                            <p>Pyber / Pymaceuticals Inc</p>
+                                            <span>Jupyter Notebook, Pandas, and Matplotlib</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-4.png)">
+                                        <div class="inner">
+                                            <p>Heroes of Pymoli / Academy of Py</p>
+                                            <span>Python Pandas</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-3.png)">
+                                        <div class="inner">
+                                            <p>PyBank / PyPoll</p>
+                                            <span>Python script</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-2.png)">
+                                        <div class="inner">
+                                            <p>Stock market analyst</p>
+                                            <span>VBA scripting</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="pf-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="pf-container">
+                                    <div class="front" style="background-image: url(./static/images/module-1.png)">
+                                        <div class="inner">
+                                            <p>KickStart My Chart</p>
+                                            <span>Excel: pivot table and pivot chart</span>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                        </ul>
+                        </div>
+                      
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="navbar-light bg-light">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-light progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+        <div class="footer-copyright text-center py-3">© Copyright bdthai81@gmail.com</div>
+      </footer>
+    </div>
+    <script src="static/js/profile.js"></script>
+    <script src="static/js/app.js"></script>
 </body>
-
 </html>
