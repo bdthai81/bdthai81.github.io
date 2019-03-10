@@ -100,7 +100,7 @@ d3.interval(() => {
             break;
     }
     profileListCounter += 1;
-}, 3000);
+}, 2500);
 
 // launch init()
 init()

@@ -10,7 +10,16 @@ var profileData = {
             {title: "Library of Heaven's Path", author: "Heng Sao Tian Ya"},
             {title: "The Rising of the Shield Hero", author: "Aneko Yusagi"}
             ],
-    movies: ["Avengers", "Netflix Godzilla", "Amazing Spider-man", "Rocky", "Gattaca", "Ex Machina", "Passengers"],
+    movies: ["Avengers", "Netflix Godzilla", "Amazing Spider-man", "Rocky", "Gattaca", "Ex Machina", "Passengers", "The Pursuit of Happyness"],
     readings: ["Random News", "Light Novels", "Tech. News", "Manga", "World News", "WSJ"],
     titles: ["Software Engineer", "Aspiring M.L. Engineer"]
 };
+
+var AssignmentsData = [{
+        frontLabel: "",
+        frontDesc: "",
+        frontImageURL: "",
+        backImageURL: "",
+        refLink = "",
+    }
+]
