@@ -20,6 +20,6 @@ var AssignmentsData = [{
         frontDesc: "",
         frontImageURL: "",
         backImageURL: "",
-        refLink = "",
+        refLink: ""
     }
-]
+];
