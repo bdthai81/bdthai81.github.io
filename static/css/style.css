@@ -5,10 +5,38 @@
 
 #profile p {
   margin-top: 0px;
-  margin-bottom: 0px; 
+  margin-bottom: 2px; 
+  font-size: 10px;
+  line-height: 1.2
 }
 
-.flat_horizontal_margin {
-  margin-top: 0px;
-  margin-bottom: 0px;
+#profileImg {
+  height: 200px; 
+  width: 94%; 
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.lead {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2
+}
+
+.list-group-item {
+  padding-left:  0px;
+  padding-right:  0px;
+}
+
+.ele-center {
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
 }

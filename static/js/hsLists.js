@@ -4,11 +4,13 @@ function loadHsList(listName, data) {
     // Loop through data
     data.forEach((itemData) => {
         // Create html list
-        var divContainer = d3.select(listName).append("li")
-            .append("div")
-            .attr("class", "pf-col")
+        var divContainer = d3.select(listName).append("div")
+            .attr("class", "col-12 col-sm-6 col-md-4")
             .attr("ontouchstart", "this.classList.toggle('hover');")
             .attr("onclick", "location.href='" + itemData.refLink + "';")
+            .on("mouseover", function() {
+                d3.select("#desc").text(itemData.desc);
+            })
             .append("div")
             .attr("class",  "pf-container");
 

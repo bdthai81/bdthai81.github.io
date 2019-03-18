@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Personal Portfolio</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Bootstrap Theme -->
     <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.css">
     <!-- D3 -->
@@ -20,16 +21,31 @@
       <header>
         <div class="Container">
             <nav class="navbar navbar-light bg-light flat_horizontal_margin">
-                <div class="row">
+                <div class="row ele-center text-center">
                     <div class="col-md-12">
-                        <h2 class="display-4 text-center">Binh D. Thai</h2>
+                        <h2 class="display-5">Binh D. Thai</h2>
                     </div>
-                    <div class="col-md-12">
-                        <p class="lead text-center flat_horizontal_margin" >bdthai81@gmail.com |
+                    <div class="col-md-12" id="headingOne">
+                        <p class="lead flat_horizontal_margin" >bdthai81@gmail.com |
                             <a class="lead" href="https://github.com/bdthai81">Github</a> |
                             <a class="lead" href="https://linkedin.com/in/bdthai81/">Linkedin</a> |
-                            <a class="lead" href="https://www.hackerrank.com/bdthai81">Hacker Rank</a>
+                            <a class="lead" href="https://www.hackerrank.com/bdthai81">Hacker Rank</a> |
+                            <a class="lead" href="#aboutme" data-toggle="collapse">About Me</a>
                         </p>
+                    </div>
+                    <div id="aboutme" class="col-md-12 collapse">
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                        <img src="./static/images/aboutme.gif" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <p class="card-title">My name is Binh.  I enjoy building things.  I’m an ex general contractor business owner from San Jose, CA with a software coding background.  My new passion encompasses the explosion of IoT (Go Raspberry Pi!). With my spare time, I enjoy reading articles with charts that tell a good story.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </nav>
@@ -42,11 +58,11 @@
                 <div class="col-md-3">
                     <!-- Profile -->
                     <div id="profile" class="card mb-3">
-                        <h2 class="card-header">Profile</h2>
+                        <h5 class="card-header">Profile</h5>
                         <div class="card-body">
-                            <h5 id="profileTitle" class="card-title"></h5>
+                            <h8 id="profileTitle" class="card-title"></h8>
                         </div>
-                        <img style="height: 200px; width: 100%; display: block;" src="./static/images/profile.png">
+                        <img id="profileImg" src="./static/images/profile.png">
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
@@ -84,19 +100,21 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <div class="pf-wrapper ">
+                    <div class="container">
                       <!-- Projects -->
                       <div class="row card mb-3">
-                        <h2 class="card-header text-center flat_horizontal_margin">Projects</h2>
-                        <div class="full hide-scroll card-body">
-                            <ul id="projectsList" class="hs"></ul>
+                        <h5 class="card-header text-center flat_horizontal_margin">Projects</h5>
+                        <div id="projectsList" class="card-body scrolling-wrapper-flexbox">
                         </div>
+                      </div>
+                      <!-- Instruction/Description -->
+                      <div class="row mb-3">
+                        <p class="card-text" id="desc">Scroll/Swipe right for more Projects/Data Analytic Assignments. Click on the image to go to the source code.</p>
                       </div>
                       <!-- Data Analytics Assignments -->
                       <div class="row card mb-3"> 
-                        <h2 class="card-header text-center flat_horizontal_margin">Data Analytics Assignments</h2>
-                        <div class="full hide-scroll card-body">
-                            <ul id="assignmentsList" class="hs"></ul>
+                        <h5 class="card-header text-center flat_horizontal_margin">Data Analytic Assignments</h5>
+                        <div id="assignmentsList" class="card-body scrolling-wrapper-flexbox">
                         </div>
                       </div>
                     </div>
