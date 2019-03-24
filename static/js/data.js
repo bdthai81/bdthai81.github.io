@@ -74,6 +74,22 @@ var projectsData = [{
 ];
 
 var assignmentsData = [{
+        refLink: "https://github.com/bdthai81/D3-challenge",
+        frontImageURL: "./static/images/module-13f.gif",
+        frontLabel: "Data Journalism and D3",
+        frontDesc: "HTML, CSS, and D3.js",
+        backImageURL: "./static/images/module-13b.gif",
+        desc: "Create a scatter plot between two of the data variables such as Healthcare vs. Poverty or Smokers vs. Age."
+    },
+    {
+        refLink: "https://bdthai81-bellybtnbiodiversity.herokuapp.com/",
+        frontImageURL: "./static/images/module-12.png",
+        frontLabel: "Belly Button Biodiversity",
+        frontDesc: "Plotly.js, and Flask app to Heroku",
+        backImageURL: "./static/images/module-12.gif",
+        desc: "Build an interactive dashboard to explore the Belly Button Biodiversity DataSet and deploy on Heroku."
+    },
+    {
         refLink: "https://bdthai81.github.io/JavaScript-challenge/StarterCode/",
         frontImageURL: "./static/images/module-11.png",
         frontLabel: "UFO Finder",
