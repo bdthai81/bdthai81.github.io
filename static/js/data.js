@@ -12,7 +12,7 @@ var profileData = {
             ],
     movies: ["Avengers", "Netflix Godzilla", "Amazing Spider-man", "Rocky", "Gattaca", "Ex Machina", "Passengers", "The Pursuit of Happyness"],
     readings: ["Random News", "Light Novels", "Tech. News", "Manga", "World News", "WSJ"],
-    titles: ["Software Engineer", "Aspiring M.L. Engineer"]
+    titles: ["Data Analyst", "Software Engineer", "Aspiring M.L. Engineer"]
 };
 
 var projectsData = [{
@@ -24,12 +24,36 @@ var projectsData = [{
         desc: "Individual project: Web controlled rover with camera and sonar sensors. Objective: To teach it reinforcement learning."
     },
     {
+        refLink: "https://github.com/bdthai81/MyProjects/tree/master/RoverQLearning",
+        frontImageURL: "./static/images/roverSim.png",
+        frontLabel: "Rover Simulation",
+        frontDesc: "Bootstrap, D3.js",
+        backImageURL: "./static/images/roverSim.gif",
+        desc: "5 sensors that detects distance from objects. Gather data from user interaction, by navigating the rover through a safe passage to collect mineral deposit."
+    },
+    {
+        refLink: "https://bdthai81-happiness.herokuapp.com/",
+        frontImageURL: "./static/images/happiness.png",
+        frontLabel: "Happiness data visualization",
+        frontDesc: "Python Flask powered RESTful API, HTML/CSS, D3.js, Leaflet.js, chart.js, Postgres, Heroku",
+        backImageURL: "./static/images/happiness.gif",
+        desc: "Team project: The purpose of this project is to measure happiness from 2011-2015 based on seven variables, including: Suicide, Global Peace Index, Happiness, Gross Domestic Product, Freedom, Generosity, Trust in Government. "
+    },
+    {
         refLink: "https://github.com/bdthai81/MyProjects/tree/master/MyAnalyticSolver",
         frontImageURL: "./static/images/analytic_gui.png",
         frontLabel: "Analytic GUI",
         frontDesc: "Python and TKInter",
         backImageURL: "./static/images/analytic_gui.gif",
         desc: "A graphic user interface that loads a .CSV file and computes a regression/classification algorithm from scikit-learn."
+    },
+    {
+        refLink: "https://github.com/bdthai81/MyProjects/tree/master/nonRedundantTeammates",
+        frontImageURL: "./static/images/nonRedundant.png",
+        frontLabel: "Nonredundant Teams",
+        frontDesc: "HTML/CSS, D3.js",
+        backImageURL: "./static/images/nonRedundant.gif",
+        desc: "Plot d3 chart of random new teammates without redundancy from previous 2 teams."
     },
     {
         refLink: "https://github.com/bdthai81/MyProjects/tree/master/Hands-On%20ML",
@@ -74,6 +98,14 @@ var projectsData = [{
 ];
 
 var assignmentsData = [{
+        refLink: "https://github.com/bdthai81/Mapping-Web-challenge",
+        frontImageURL: "./static/images/module-14.png",
+        frontLabel: "Visualizing Data with Leaflet",
+        frontDesc: "HTML, CSS, and Leaflet.js",
+        backImageURL: "./static/images/module-14.gif",
+        desc: "Create a map using Leaflet that plots all of the earthquakes from the USGS data set based on their longitude and latitude."
+    },
+    {
         refLink: "https://github.com/bdthai81/D3-challenge",
         frontImageURL: "./static/images/module-13f.gif",
         frontLabel: "Data Journalism and D3",

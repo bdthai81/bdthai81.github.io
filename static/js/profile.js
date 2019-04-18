@@ -36,7 +36,7 @@ var profileListCounter = 0;
 // The initial display.
 function initProfile() {
     // Update the 1st list items: Take the first item from array, counter=0
-    update("#profileTitle", titles[(profileCounter%2)]);
+    update("#profileTitle", titles[(profileCounter%titles.length)]);
     update("#profileActivitie1", activities[(profileCounter%activities.length)]);
     var book = "\"" + books[(profileCounter%books.length)]["title"] 
            + "\" by " + 
@@ -69,7 +69,7 @@ function initProfile() {
 // Grab a random sample from the list.
 d3.interval(() => {
     // Update in sequential order 
-    update("#profileTitle", titles[(profileListCounter%2)]);
+    update("#profileTitle", titles[(profileListCounter%titles.length)]);
     selectedList = (profileListCounter%4);
     // Update list item
     switch (selectedList) {
